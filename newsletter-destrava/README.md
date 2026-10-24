@@ -19,6 +19,7 @@ Procure por `[` no arquivo e preencha:
 - `[dia] de [mês] de [ano]`
 - `[Cargo]` do Caio e do Edson
 - `[link-agenda-check-in]` (clientes) e `[link-agenda-diagnostico]` (pipeline)
+- `[link-nota-1]` a `[link-nota-5]` (avaliação da edição; no ActiveCampaign, cada link pode aplicar uma tag)
 - `[link-instagram]`, `[link-linkedin]`, `[link-site]`, `[Endereço da unidade]`, `[Cidade/UF]`
 - Opcional: trocar os círculos "CF" e "EP" por fotos (instrução em comentário no HTML)
 - Ajuste a cor `#E30613` se o vermelho oficial do brand book da V4 for outro
