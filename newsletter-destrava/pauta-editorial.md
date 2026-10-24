@@ -1,9 +1,9 @@
 # DESTRAVA: calendário editorial (12 edições, quinzenal ≈ 6 meses)
 
-Cada edição tem o mesmo esqueleto: **abertura → coluna do Caio (receita) → coluna do Edson (caixa) → O número → Radar → Diagnóstico de 2 minutos → CTA**.
-As duas colunas sempre conversam: o Caio mostra como destravar receita e o Edson mostra o que isso exige (ou libera) de caixa, margem e gestão. É essa ponte entre marketing e finanças que posiciona a unidade como parceira de negócio, não como "agência de anúncio".
+Cada edição tem o mesmo esqueleto: **abertura → coluna do Caio (receita) → coluna do Edison (caixa) → O número → Radar → Diagnóstico de 2 minutos → CTA**.
+As duas colunas sempre conversam: o Caio mostra como destravar receita e o Edison mostra o que isso exige (ou libera) de caixa, margem e gestão. É essa ponte entre marketing e finanças que posiciona a unidade como parceira de negócio, não como "agência de anúncio".
 
-| # | Assunto do e-mail | Coluna do Caio (marketing e receita) | Coluna do Edson (gestão e finanças) | O número |
+| # | Assunto do e-mail | Coluna do Caio (marketing e receita) | Coluna do Edison (gestão e finanças) | O número |
 |---|---|---|---|---|
 | 01 | Seu problema não é lead | Bowtie: receita é multiplicação de conversões | Ciclo financeiro: o crescimento que quebra empresas | 46% (1,1⁴) |
 | 02 | O lead esfriou enquanto você almoçava | Speed-to-lead, SLA marketing ↔ vendas, cadência de follow-up | Custo do vendedor ocioso × custo do lead perdido: a conta que ninguém faz | 7× (HBR, resposta em até 1h) |
@@ -30,7 +30,7 @@ As duas colunas sempre conversam: o Caio mostra como destravar receita e o Edson
 ## Bancos de pauta para o "Radar" (notas curtas, 2 a 4 linhas)
 
 - Mudanças de plataforma (Meta, Google, IA nas buscas) **e o que muda na prática para o empresário**
-- Prazos fiscais e tributários relevantes do mês (Edson)
+- Prazos fiscais e tributários relevantes do mês (Edison)
 - Um aprendizado de campo da carteira, sem identificar o cliente
 - Um livro, ferramenta ou framework com uma frase de "por que importa"
 

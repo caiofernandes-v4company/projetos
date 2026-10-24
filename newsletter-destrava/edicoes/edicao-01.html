@@ -9,186 +9,234 @@
   DESTRAVA — newsletter da V4 Ferraz & Piai
   Edição 01 — "Seu problema não é lead. É o bowtie inteiro."
 
-  Template de e-mail: tabelas + CSS inline, 600px, fontes seguras.
-  Merge tags no padrão ActiveCampaign (%FIRSTNAME%, %UNSUBSCRIBELINK%, %WEBCOPY%).
-  Bloco de CTA tem conteúdo condicional por tag: "cliente-base" x "pipeline".
-  Tudo que está entre [colchetes] precisa ser preenchido antes do envio.
+  E-mail em tabelas + CSS inline, 600px, fundo branco.
+  Paleta (troque pelos hex do brand book, se forem diferentes):
+    #E30613  vermelho V4: SÓ logo, linha do topo, número de destaque, botão principal e marcadores
+    #1A1A1A  grafite: títulos e texto forte
+    #3D4350  ardósia: botões secundários e destaques menores
+    #5F6672  cinza: texto de apoio
+    #F5F6F7  cinza claro: fundo dos boxes
+    #E6E8EB  linhas e bordas
+    #1F8A4C / #C62828  setas de alta / baixa no painel de indicadores
+  Merge tags no padrão ActiveCampaign (%FIRSTNAME%, %WEBCOPY%, %UNSUBSCRIBELINK%).
+  Tudo entre [colchetes] precisa ser preenchido antes do envio.
 -->
 <style>
-  body { margin:0; padding:0; background:#EDEDED; }
+  body { margin:0; padding:0; background:#F5F6F7; }
   table { border-collapse:collapse; }
   img { border:0; display:block; }
-  a { color:#E30613; }
   @media only screen and (max-width:620px) {
     .container { width:100% !important; }
     .px { padding-left:20px !important; padding-right:20px !important; }
-    .stack { display:block !important; width:100% !important; }
+    .stack { display:block !important; width:100% !important; box-sizing:border-box; }
+    .gap { padding:0 0 12px 0 !important; }
     .h1 { font-size:26px !important; line-height:32px !important; }
-    .num { font-size:44px !important; line-height:48px !important; }
+    .hero { font-size:30px !important; line-height:36px !important; }
   }
 </style>
 </head>
-<body style="margin:0; padding:0; background:#EDEDED;">
+<body style="margin:0; padding:0; background:#F5F6F7;">
 
-<!-- Preheader (aparece na prévia da caixa de entrada) -->
-<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; color:#EDEDED; line-height:1px;">
+<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; color:#F5F6F7; line-height:1px;">
   Melhorar 10% em cada etapa do funil gera 46% mais receita. E o caixa que esse crescimento vai exigir.
 </div>
 
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#EDEDED;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7;">
 <tr><td align="center" style="padding:24px 10px;">
 
-<table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:600px; max-width:600px; background:#FFFFFF;">
+<table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" style="width:600px; max-width:600px; background:#FFFFFF; border:1px solid #E6E8EB;">
 
-  <!-- Barra superior -->
+  <!-- Linha vermelha do topo -->
+  <tr><td style="height:4px; background:#E30613; line-height:4px; font-size:4px;">&nbsp;</td></tr>
+
+  <!-- Cabeçalho -->
   <tr>
-    <td class="px" style="padding:10px 40px; background:#0F0F0F; font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#9A9A9A;">
+    <td class="px" style="padding:28px 40px 0;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
         <tr>
-          <td style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:#9A9A9A;">Edição #01 &middot; [dia] de [mês] de [ano]</td>
-          <td align="right" style="font-family:Arial,Helvetica,sans-serif; font-size:11px;"><a href="%WEBCOPY%" style="color:#9A9A9A; text-decoration:underline;">Ver no navegador</a></td>
+          <!-- Troque pelo logo oficial: <img src="[url-logo-v4]" height="28" alt="V4 Ferraz & Piai"> -->
+          <td style="font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; letter-spacing:1px; color:#1A1A1A;">V4 <span style="color:#E30613;">|</span> FERRAZ &amp; PIAI</td>
+          <td align="right" style="font-family:Arial,Helvetica,sans-serif; font-size:12px;"><a href="%WEBCOPY%" style="color:#5F6672; text-decoration:underline;">Ver no navegador</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="px" style="padding:26px 40px 0;">
+      <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">EDIÇÃO #01 &nbsp;&middot;&nbsp; [DIA DA SEMANA], [DD/MM/AAAA]</div>
+      <div class="hero" style="font-family:Arial Black,Arial,Helvetica,sans-serif; font-size:46px; line-height:50px; color:#1A1A1A; font-weight:900; letter-spacing:-1.5px; padding-top:8px;">DESTRAVA<span style="color:#E30613;">.</span></div>
+      <div style="font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:22px; color:#5F6672; padding-top:6px;">Receita, caixa e estratégia para quem decide o crescimento da empresa.</div>
+    </td>
+  </tr>
+
+  <!-- Painel do empresário (indicadores) — preencha com os dados do dia do envio -->
+  <tr>
+    <td class="px" style="padding:22px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #E6E8EB; border-bottom:1px solid #E6E8EB;">
+        <tr>
+          <td align="center" style="padding:12px 4px; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:16px; color:#5F6672;">SELIC<br><strong style="font-size:14px; color:#1A1A1A;">[x,xx%]</strong></td>
+          <td align="center" style="padding:12px 4px; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:16px; color:#5F6672;">IPCA 12M<br><strong style="font-size:14px; color:#1A1A1A;">[x,xx%]</strong> <span style="color:#C62828;">&#9650;</span></td>
+          <td align="center" style="padding:12px 4px; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:16px; color:#5F6672;">DÓLAR<br><strong style="font-size:14px; color:#1A1A1A;">[R$ x,xx]</strong> <span style="color:#1F8A4C;">&#9660;</span></td>
+          <td align="center" style="padding:12px 4px; font-family:Arial,Helvetica,sans-serif; font-size:11px; line-height:16px; color:#5F6672;">IBOVESPA<br><strong style="font-size:14px; color:#1A1A1A;">[xxx.xxx]</strong> <span style="color:#1F8A4C;">&#9650;</span></td>
         </tr>
       </table>
     </td>
   </tr>
 
-  <!-- Cabeçalho -->
+  <!-- Quem assina + encaminhar -->
   <tr>
-    <td class="px" style="padding:36px 40px 30px; background:#0F0F0F; border-bottom:4px solid #E30613;">
-      <div style="font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:3px; color:#E30613; font-weight:bold;">V4 FERRAZ &amp; PIAI</div>
-      <div style="font-family:Arial Black,Arial,Helvetica,sans-serif; font-size:44px; line-height:48px; color:#FFFFFF; font-weight:900; letter-spacing:-1px; padding-top:6px;">DESTRAVA<span style="color:#E30613;">.</span></div>
-      <div style="font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:21px; color:#CFCFCF; padding-top:8px;">Receita, caixa e estratégia para quem decide o crescimento da empresa.</div>
+    <td class="px" style="padding:22px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <!-- Troque os círculos por fotos: <img src="[url-foto]" width="40" height="40" style="border-radius:20px;"> -->
+          <td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background:#1A1A1A; border-radius:20px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; color:#FFFFFF;">CF</td>
+          <td width="6" style="width:6px;"></td>
+          <td width="40" height="40" align="center" valign="middle" style="width:40px; height:40px; background:#3D4350; border-radius:20px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; color:#FFFFFF;">EP</td>
+          <td style="padding-left:12px; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:19px; color:#5F6672;">
+            Por <strong style="color:#1A1A1A;">Caio Fernandes</strong> e <strong style="color:#1A1A1A;">Edison Piai</strong><br>
+            Encaminhe: <a href="https://wa.me/?text=[texto-e-link-da-edicao-codificado]" style="color:#1A1A1A; font-weight:bold;">WhatsApp</a> &middot; <a href="mailto:?subject=DESTRAVA%20%2301&amp;body=[link-da-edicao]" style="color:#1A1A1A; font-weight:bold;">e-mail</a>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 
   <!-- Abertura -->
   <tr>
-    <td class="px" style="padding:36px 40px 8px; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#1E1E1E;">
+    <td class="px" style="padding:30px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#2A2A2A;">
       <p style="margin:0 0 16px;">Olá, %FIRSTNAME%.</p>
       <p style="margin:0 0 16px;">Quase toda conversa de crescimento que temos começa com a mesma frase: <em>"preciso de mais leads"</em>. Em boa parte dos casos, não precisa. O dinheiro está vazando em outra etapa: no comercial que demora para responder, no cliente que não renova, no caixa que não aguenta o próprio crescimento.</p>
-      <p style="margin:0 0 16px;">A DESTRAVA nasceu para isso. A cada quinze dias, duas visões do mesmo problema: a minha, sobre <strong>marketing estratégico e receita</strong>, e a do Edson, sobre <strong>gestão, finanças e caixa</strong>. Nada de teoria pela teoria: só o que temos visto funcionar (e falhar) nas empresas que acompanhamos.</p>
-      <p style="margin:0;">Boa leitura.</p>
+      <p style="margin:0;">A DESTRAVA traz, a cada quinze dias, duas leituras do mesmo problema: a de <strong>receita e marketing estratégico</strong> e a de <strong>gestão, finanças e caixa</strong>. Só o que temos visto funcionar (e falhar) nas empresas que acompanhamos.</p>
     </td>
   </tr>
 
   <!-- Nesta edição -->
   <tr>
-    <td class="px" style="padding:28px 40px 8px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F6F6F6; border-left:4px solid #E30613;">
+    <td class="px" style="padding:26px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;">
         <tr>
-          <td style="padding:18px 22px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:24px; color:#1E1E1E;">
-            <div style="font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold; padding-bottom:6px;">NESTA EDIÇÃO</div>
-            <strong>01 &middot; Receita</strong>: Seu problema não é lead. É o bowtie inteiro.<br>
-            <strong>02 &middot; Caixa</strong>: Lucro não paga boleto: o crescimento que quebra empresas.<br>
-            <strong>03 &middot; O número</strong>: 46%<br>
-            <strong>04 &middot; Radar</strong>: Reforma tributária, 2027 começa agora.<br>
-            <strong>05 &middot; Diagnóstico de 2 minutos</strong>
+          <td style="padding:18px 22px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:25px; color:#2A2A2A;">
+            <div style="font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold; padding-bottom:4px;">NESTA EDIÇÃO</div>
+            <span style="color:#E30613; font-weight:bold;">01</span>&nbsp; Seu problema não é lead. É o bowtie inteiro.<br>
+            <span style="color:#E30613; font-weight:bold;">02</span>&nbsp; Lucro não paga boleto.<br>
+            <span style="color:#E30613; font-weight:bold;">03</span>&nbsp; Números da quinzena<br>
+            <span style="color:#E30613; font-weight:bold;">04</span>&nbsp; No radar: reforma tributária e fim de ano<br>
+            <span style="color:#E30613; font-weight:bold;">05</span>&nbsp; Diagnóstico de 2 minutos
           </td>
         </tr>
       </table>
     </td>
   </tr>
 
-  <!-- ============ 01 · COLUNA CAIO ============ -->
+  <!-- ================= 01 · RECEITA (CAIO) ================= -->
   <tr>
-    <td class="px" style="padding:40px 40px 0;">
-      <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold;">01 &middot; RECEITA &amp; CRESCIMENTO</div>
-      <h1 class="h1" style="margin:10px 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:30px; line-height:36px; color:#0F0F0F; font-weight:800;">Seu problema não é lead. É o bowtie inteiro.</h1>
-      <!-- Autor -->
-      <table role="presentation" cellpadding="0" cellspacing="0">
-        <tr>
-          <!-- Troque o círculo por <img src="[url-foto-caio]" width="44" height="44" style="border-radius:22px;"> -->
-          <td width="44" height="44" align="center" valign="middle" style="width:44px; height:44px; background:#E30613; border-radius:22px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:bold; color:#FFFFFF;">CF</td>
-          <td style="padding-left:12px; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:18px; color:#555555;">
-            <strong style="color:#0F0F0F;">Caio Fernandes</strong><br>
-            [Cargo] &middot; Marketing estratégico e receita
-          </td>
-        </tr>
-      </table>
+    <td class="px" style="padding:44px 40px 0;">
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td width="18" style="width:18px; border-top:3px solid #E30613; font-size:1px; line-height:1px;">&nbsp;</td>
+        <td style="padding-left:8px; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">01 &middot; RECEITA &amp; CRESCIMENTO</td>
+      </tr></table>
+      <h1 class="h1" style="margin:12px 0 6px; font-family:Arial,Helvetica,sans-serif; font-size:30px; line-height:36px; color:#1A1A1A; font-weight:800; letter-spacing:-0.5px;">Seu problema não é lead. É o bowtie inteiro.</h1>
+      <div style="font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#3D4350; font-weight:bold; padding-bottom:18px;">Antes de dobrar a verba, descubra em que etapa a receita está travando.</div>
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td width="44" height="44" align="center" valign="middle" style="width:44px; height:44px; background:#1A1A1A; border-radius:22px; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:bold; color:#FFFFFF;">CF</td>
+        <td style="padding-left:12px; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:18px; color:#5F6672;"><strong style="color:#1A1A1A; font-size:14px;">Caio Fernandes</strong><br>[Cargo] &middot; V4 Ferraz &amp; Piai</td>
+      </tr></table>
     </td>
   </tr>
   <tr>
-    <td class="px" style="padding:22px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#1E1E1E;">
-      <p style="margin:0 0 16px;">O funil clássico termina na venda. Por isso tanta empresa trata o fechamento como linha de chegada e despeja orçamento só no topo. O <strong>bowtie</strong> (a "gravata-borboleta") corrige essa visão: do lado esquerdo está a aquisição (atenção, interesse, qualificação, fechamento); do lado direito, o que acontece <em>depois</em> da venda: ativação, retenção e expansão.</p>
-      <p style="margin:0 0 16px;">A diferença não é estética. Receita é uma <strong>multiplicação de taxas de conversão</strong>, não uma soma. Quando cada etapa melhora um pouco, o efeito composto é enorme:</p>
+    <td class="px" style="padding:22px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#2A2A2A;">
+      <p style="margin:0 0 16px;">O funil clássico termina na venda. Por isso tanta empresa trata o fechamento como linha de chegada e despeja orçamento só no topo. O <strong>bowtie</strong> (a "gravata-borboleta") corrige essa visão: de um lado está a aquisição; do outro, o que acontece <em>depois</em> da venda, ou seja, ativação, retenção e expansão.</p>
+      <p style="margin:0 0 16px;">A diferença não é estética. Receita é uma <strong>multiplicação de taxas de conversão</strong>, não uma soma.</p>
     </td>
   </tr>
 
-  <!-- Bowtie visual (tabela simples, funciona em qualquer cliente de e-mail) -->
+  <!-- Bowtie -->
   <tr>
-    <td class="px" style="padding:6px 40px 6px;">
+    <td class="px" style="padding:4px 40px 4px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif; text-align:center;">
         <tr>
-          <td width="33%" style="padding:12px 6px; background:#0F0F0F; color:#FFFFFF; font-size:12px; line-height:17px;"><strong>AQUISIÇÃO</strong><br><span style="color:#BDBDBD;">Atenção &rarr; Lead &rarr; Oportunidade &rarr; Venda</span></td>
-          <td width="34%" style="padding:12px 6px; background:#E30613; color:#FFFFFF; font-size:13px; line-height:17px;"><strong>VENDA</strong><br>o nó da gravata</td>
-          <td width="33%" style="padding:12px 6px; background:#0F0F0F; color:#FFFFFF; font-size:12px; line-height:17px;"><strong>RECEITA RECORRENTE</strong><br><span style="color:#BDBDBD;">Ativação &rarr; Retenção &rarr; Expansão</span></td>
+          <td width="38%" style="padding:14px 8px; background:#F5F6F7; border-radius:10px 0 0 10px; color:#1A1A1A; font-size:12px; line-height:18px;"><strong>AQUISIÇÃO</strong><br><span style="color:#5F6672;">Atenção &rarr; Lead &rarr; Oportunidade</span></td>
+          <td width="24%" style="padding:14px 6px; background:#1A1A1A; color:#FFFFFF; font-size:12px; line-height:18px;"><strong>VENDA</strong><br><span style="color:#C9CDD3;">o nó da gravata</span></td>
+          <td width="38%" style="padding:14px 8px; background:#F5F6F7; border-radius:0 10px 10px 0; color:#1A1A1A; font-size:12px; line-height:18px;"><strong>RECEITA RECORRENTE</strong><br><span style="color:#5F6672;">Ativação &rarr; Retenção &rarr; Expansão</span></td>
         </tr>
       </table>
     </td>
   </tr>
 
   <tr>
-    <td class="px" style="padding:16px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#1E1E1E;">
-      <p style="margin:0 0 16px;">Quatro etapas melhorando 10% cada uma: 1,1 &times; 1,1 &times; 1,1 &times; 1,1 = <strong>1,46</strong>. São 46% mais receita <em>sem dobrar o investimento em mídia</em>. Agora compare com o caminho mais comum: dobrar a verba para dobrar os leads, e ver o comercial afogar, o CAC subir e a taxa de conversão cair.</p>
-      <p style="margin:0 0 16px;">Na prática, os gargalos que mais encontramos estão no meio da gravata, não no topo:</p>
+    <td class="px" style="padding:16px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#2A2A2A;">
+      <p style="margin:0 0 16px;">Quatro etapas melhorando 10% cada uma: 1,1 &times; 1,1 &times; 1,1 &times; 1,1 = <strong>1,46</strong>. São 46% mais receita <em>sem dobrar o investimento em mídia</em>. O caminho mais comum é o oposto: dobrar a verba para dobrar os leads, e ver o comercial afogar, o CAC subir e a conversão cair.</p>
+      <p style="margin:0 0 16px;">Os gargalos que mais encontramos estão no meio da gravata, não no topo:</p>
     </td>
   </tr>
   <tr>
     <td class="px" style="padding:0 40px 0;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#1E1E1E;">
-        <tr><td valign="top" width="28" style="color:#E30613; font-weight:bold; padding:0 0 12px;">&#9654;</td><td style="padding:0 0 12px;"><strong>Velocidade de resposta.</strong> Um estudo clássico publicado na Harvard Business Review mostrou que empresas que respondem ao lead em até uma hora têm cerca de 7 vezes mais chance de qualificá-lo do que as que demoram mais. Quanto tempo o seu time leva hoje?</td></tr>
-        <tr><td valign="top" width="28" style="color:#E30613; font-weight:bold; padding:0 0 12px;">&#9654;</td><td style="padding:0 0 12px;"><strong>Critério de qualificação.</strong> Sem definição clara de "lead bom", marketing comemora volume e vendas reclama de qualidade. Os dois têm razão, e a receita não aparece.</td></tr>
-        <tr><td valign="top" width="28" style="color:#E30613; font-weight:bold; padding:0 0 12px;">&#9654;</td><td style="padding:0 0 12px;"><strong>Follow-up que morre na segunda tentativa.</strong> Boa parte das vendas consultivas acontece depois de vários contatos, mas a maioria dos times desiste antes.</td></tr>
-        <tr><td valign="top" width="28" style="color:#E30613; font-weight:bold; padding:0 0 12px;">&#9654;</td><td style="padding:0 0 12px;"><strong>Lado direito abandonado.</strong> Onboarding fraco gera churn cedo. E churn cedo destrói a conta de LTV que justificaria investir mais em aquisição.</td></tr>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#2A2A2A;">
+        <tr><td valign="top" width="22" style="padding:2px 0 14px;"><div style="width:8px; height:8px; background:#E30613; border-radius:4px; margin-top:6px;"></div></td><td style="padding:0 0 14px;"><strong>Velocidade de resposta.</strong> Um estudo publicado na Harvard Business Review (2011) mostrou que empresas que respondem ao lead em até uma hora têm cerca de 7 vezes mais chance de qualificá-lo do que as que demoram mais.</td></tr>
+        <tr><td valign="top" width="22" style="padding:2px 0 14px;"><div style="width:8px; height:8px; background:#E30613; border-radius:4px; margin-top:6px;"></div></td><td style="padding:0 0 14px;"><strong>Critério de qualificação.</strong> Sem definição clara de "lead bom", marketing comemora volume e vendas reclama de qualidade. Os dois têm razão, e a receita não aparece.</td></tr>
+        <tr><td valign="top" width="22" style="padding:2px 0 14px;"><div style="width:8px; height:8px; background:#E30613; border-radius:4px; margin-top:6px;"></div></td><td style="padding:0 0 14px;"><strong>Follow-up que morre na segunda tentativa.</strong> Venda consultiva acontece depois de vários contatos, e a maioria dos times desiste antes.</td></tr>
+        <tr><td valign="top" width="22" style="padding:2px 0 14px;"><div style="width:8px; height:8px; background:#E30613; border-radius:4px; margin-top:6px;"></div></td><td style="padding:0 0 14px;"><strong>Lado direito abandonado.</strong> Onboarding fraco gera churn cedo. E churn cedo destrói a conta de LTV que justificaria investir mais em aquisição.</td></tr>
       </table>
     </td>
   </tr>
 
-  <!-- Faça na segunda-feira -->
+  <!-- Comece por aqui (Caio) -->
   <tr>
-    <td class="px" style="padding:10px 40px 0;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #0F0F0F;">
+    <td class="px" style="padding:8px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;">
+        <tr><td style="padding:22px 24px 8px; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">COMECE POR AQUI</td></tr>
+        <tr><td style="padding:0 24px 18px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;">
+            <tr><td valign="top" width="40" style="font-size:22px; font-weight:900; color:#3D4350; padding:0 0 12px;">01</td><td style="font-size:15px; line-height:22px; color:#1A1A1A; font-weight:bold; padding:2px 0 12px;">Puxe os últimos 90 dias: leads, oportunidades, propostas, vendas e clientes ativos após 90 dias.</td></tr>
+            <tr><td valign="top" width="40" style="font-size:22px; font-weight:900; color:#3D4350; padding:0 0 12px;">02</td><td style="font-size:15px; line-height:22px; color:#1A1A1A; font-weight:bold; padding:2px 0 12px;">Calcule a conversão entre cada etapa.</td></tr>
+            <tr><td valign="top" width="40" style="font-size:22px; font-weight:900; color:#3D4350; padding:0 0 4px;">03</td><td style="font-size:15px; line-height:22px; color:#1A1A1A; font-weight:bold; padding:2px 0 4px;">Coloque o próximo real na maior queda, não no topo.</td></tr>
+          </table>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+  <!-- Mini CTA do autor -->
+  <tr>
+    <td class="px" style="padding:16px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E6E8EB; border-radius:10px;">
         <tr>
-          <td style="padding:18px 22px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#1E1E1E;">
-            <div style="font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold; padding-bottom:6px;">FAÇA NA SEGUNDA-FEIRA</div>
-            Puxe os últimos 90 dias e monte uma linha só: <strong>leads &rarr; oportunidades &rarr; propostas &rarr; vendas &rarr; clientes ativos após 90 dias</strong>. Calcule a conversão entre cada etapa. A maior queda é o seu gargalo, e é nele que o próximo real deve ir, não no topo.
+          <td class="stack" style="padding:16px 20px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:21px; color:#1A1A1A; font-weight:bold;">Quer que o Caio olhe o funil da sua empresa?</td>
+          <td class="stack" align="right" style="padding:0 20px 16px 20px;">
+            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#3D4350; border-radius:6px;">
+              <a href="[link-pergunta-caio]" style="display:inline-block; padding:11px 18px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; color:#FFFFFF; text-decoration:none; white-space:nowrap;">Falar com o Caio</a>
+            </td></tr></table>
           </td>
         </tr>
       </table>
     </td>
   </tr>
 
-  <!-- Divisor -->
-  <tr><td class="px" style="padding:40px 40px 0;"><div style="height:1px; background:#E2E2E2; line-height:1px; font-size:1px;">&nbsp;</div></td></tr>
-
-  <!-- ============ 02 · COLUNA EDSON ============ -->
+  <!-- ================= 02 · CAIXA (EDISON) ================= -->
   <tr>
-    <td class="px" style="padding:36px 40px 0;">
-      <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold;">02 &middot; CAIXA &amp; GESTÃO</div>
-      <h1 class="h1" style="margin:10px 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:30px; line-height:36px; color:#0F0F0F; font-weight:800;">Lucro não paga boleto: o crescimento que quebra empresas.</h1>
-      <table role="presentation" cellpadding="0" cellspacing="0">
-        <tr>
-          <!-- Troque o círculo por <img src="[url-foto-edson]" width="44" height="44" style="border-radius:22px;"> -->
-          <td width="44" height="44" align="center" valign="middle" style="width:44px; height:44px; background:#0F0F0F; border-radius:22px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:bold; color:#FFFFFF;">EP</td>
-          <td style="padding-left:12px; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:18px; color:#555555;">
-            <strong style="color:#0F0F0F;">Edson Piai</strong><br>
-            [Cargo] &middot; Gestão, finanças e tributos
-          </td>
-        </tr>
-      </table>
+    <td class="px" style="padding:48px 40px 0;">
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td width="18" style="width:18px; border-top:3px solid #E30613; font-size:1px; line-height:1px;">&nbsp;</td>
+        <td style="padding-left:8px; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">02 &middot; CAIXA &amp; GESTÃO</td>
+      </tr></table>
+      <h1 class="h1" style="margin:12px 0 6px; font-family:Arial,Helvetica,sans-serif; font-size:30px; line-height:36px; color:#1A1A1A; font-weight:800; letter-spacing:-0.5px;">Lucro não paga boleto.</h1>
+      <div style="font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#3D4350; font-weight:bold; padding-bottom:18px;">Por que empresas que crescem podem quebrar no caixa.</div>
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td width="44" height="44" align="center" valign="middle" style="width:44px; height:44px; background:#3D4350; border-radius:22px; font-family:Arial,Helvetica,sans-serif; font-size:14px; font-weight:bold; color:#FFFFFF;">EP</td>
+        <td style="padding-left:12px; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:18px; color:#5F6672;"><strong style="color:#1A1A1A; font-size:14px;">Edison Piai</strong><br>[Cargo] &middot; V4 Ferraz &amp; Piai</td>
+      </tr></table>
     </td>
   </tr>
   <tr>
-    <td class="px" style="padding:22px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#1E1E1E;">
-      <p style="margin:0 0 16px;">O Caio acabou de mostrar como destravar receita. Minha parte é garantir que a empresa sobreviva a ela. Parece exagero, mas uma das causas mais comuns de aperto em empresas saudáveis é <strong>crescer sem caixa para financiar o crescimento</strong>.</p>
+    <td class="px" style="padding:22px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#2A2A2A;">
+      <p style="margin:0 0 16px;">O Caio acabou de mostrar como destravar receita. Minha parte é garantir que a empresa aguente o próprio crescimento. Uma das causas mais comuns de aperto em empresas saudáveis é <strong>crescer sem caixa para financiar o crescimento</strong>.</p>
       <p style="margin:0 0 16px;">O motivo está no <strong>ciclo financeiro</strong>: o tempo entre pagar fornecedores e equipe e receber do cliente.</p>
     </td>
   </tr>
   <tr>
     <td class="px" style="padding:4px 40px 4px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0F0F0F;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-left:3px solid #3D4350; background:#F5F6F7;">
         <tr>
-          <td align="center" style="padding:18px 16px; font-family:Arial,Helvetica,sans-serif; font-size:16px; line-height:24px; color:#FFFFFF;">
+          <td style="padding:16px 20px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#1A1A1A;">
             <strong>Ciclo financeiro</strong> = prazo médio de recebimento + prazo médio de estoque &minus; prazo médio de pagamento
           </td>
         </tr>
@@ -196,148 +244,267 @@
     </td>
   </tr>
   <tr>
-    <td class="px" style="padding:16px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#1E1E1E;">
-      <p style="margin:0 0 16px;"><strong>Um exemplo:</strong> uma empresa que fatura R$ 600 mil por mês (cerca de R$ 20 mil por dia) e tem ciclo financeiro de 45 dias carrega algo próximo de <strong>R$ 900 mil</strong> financiando a própria operação. Se ela crescer 30%, vai precisar de aproximadamente <strong>R$ 270 mil a mais de caixa</strong> <em>antes</em> de o lucro desse crescimento aparecer na conta.</p>
+    <td class="px" style="padding:16px 40px 0; font-family:Georgia,'Times New Roman',serif; font-size:17px; line-height:28px; color:#2A2A2A;">
+      <p style="margin:0 0 16px;"><strong>Um exemplo:</strong> uma empresa que fatura R$ 600 mil por mês (cerca de R$ 20 mil por dia) com ciclo financeiro de 45 dias carrega algo próximo de <strong>R$ 900 mil</strong> financiando a própria operação. Se crescer 30%, vai precisar de aproximadamente <strong>R$ 270 mil a mais de caixa</strong> <em>antes</em> de o lucro desse crescimento aparecer na conta.</p>
       <p style="margin:0 0 16px;">É por isso que o DRE mostra lucro e o extrato mostra cheque especial. Três alavancas resolvem a maior parte dos casos:</p>
     </td>
   </tr>
   <tr>
     <td class="px" style="padding:0 40px 0;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#1E1E1E;">
-        <tr><td valign="top" width="28" style="color:#E30613; font-weight:bold; padding:0 0 12px;">1</td><td style="padding:0 0 12px;"><strong>Encurte o recebimento.</strong> Desconto para Pix à vista, entrada na assinatura do contrato, cobrança recorrente no cartão. Cada dia a menos libera caixa.</td></tr>
-        <tr><td valign="top" width="28" style="color:#E30613; font-weight:bold; padding:0 0 12px;">2</td><td style="padding:0 0 12px;"><strong>Alongue o pagamento, com critério.</strong> Renegociar prazo com fornecedor costuma custar menos do que antecipar recebíveis.</td></tr>
-        <tr><td valign="top" width="28" style="color:#E30613; font-weight:bold; padding:0 0 12px;">3</td><td style="padding:0 0 12px;"><strong>Planeje o crescimento no fluxo de caixa, não só no DRE.</strong> Meta de vendas sem projeção de caixa é aposta.</td></tr>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#2A2A2A;">
+        <tr><td valign="top" width="22" style="padding:2px 0 14px;"><div style="width:8px; height:8px; background:#E30613; border-radius:4px; margin-top:6px;"></div></td><td style="padding:0 0 14px;"><strong>Encurte o recebimento.</strong> Desconto para Pix à vista, entrada na assinatura do contrato, cobrança recorrente no cartão.</td></tr>
+        <tr><td valign="top" width="22" style="padding:2px 0 14px;"><div style="width:8px; height:8px; background:#E30613; border-radius:4px; margin-top:6px;"></div></td><td style="padding:0 0 14px;"><strong>Alongue o pagamento, com critério.</strong> Renegociar prazo com fornecedor costuma custar menos do que antecipar recebíveis.</td></tr>
+        <tr><td valign="top" width="22" style="padding:2px 0 14px;"><div style="width:8px; height:8px; background:#E30613; border-radius:4px; margin-top:6px;"></div></td><td style="padding:0 0 14px;"><strong>Planeje o crescimento no fluxo de caixa, não só no DRE.</strong> Meta de vendas sem projeção de caixa é aposta.</td></tr>
       </table>
     </td>
   </tr>
   <tr>
-    <td class="px" style="padding:10px 40px 0;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #0F0F0F;">
+    <td class="px" style="padding:8px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;">
+        <tr><td style="padding:22px 24px 8px; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">COMECE POR AQUI</td></tr>
+        <tr><td style="padding:0 24px 18px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;">
+            <tr><td valign="top" width="40" style="font-size:22px; font-weight:900; color:#3D4350; padding:0 0 12px;">01</td><td style="font-size:15px; line-height:22px; color:#1A1A1A; font-weight:bold; padding:2px 0 12px;">Peça ao financeiro o prazo médio de recebimento e o de pagamento.</td></tr>
+            <tr><td valign="top" width="40" style="font-size:22px; font-weight:900; color:#3D4350; padding:0 0 12px;">02</td><td style="font-size:15px; line-height:22px; color:#1A1A1A; font-weight:bold; padding:2px 0 12px;">Projete o saldo de caixa dos próximos 90 dias.</td></tr>
+            <tr><td valign="top" width="40" style="font-size:22px; font-weight:900; color:#3D4350; padding:0 0 4px;">03</td><td style="font-size:15px; line-height:22px; color:#1A1A1A; font-weight:bold; padding:2px 0 4px;">Simule o que acontece com esse saldo se as vendas crescerem 30%.</td></tr>
+          </table>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="px" style="padding:16px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E6E8EB; border-radius:10px;">
         <tr>
-          <td style="padding:18px 22px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#1E1E1E;">
-            <div style="font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold; padding-bottom:6px;">FAÇA NA SEGUNDA-FEIRA</div>
-            Peça ao financeiro três números: prazo médio de recebimento, prazo médio de pagamento e saldo projetado para os próximos 90 dias. Se algum deles não existir, você acabou de encontrar a prioridade da semana.
+          <td class="stack" style="padding:16px 20px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:21px; color:#1A1A1A; font-weight:bold;">Quer conversar com o Edison sobre o caixa da sua empresa?</td>
+          <td class="stack" align="right" style="padding:0 20px 16px 20px;">
+            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#3D4350; border-radius:6px;">
+              <a href="[link-pergunta-edison]" style="display:inline-block; padding:11px 18px; font-family:Arial,Helvetica,sans-serif; font-size:13px; font-weight:bold; color:#FFFFFF; text-decoration:none; white-space:nowrap;">Falar com o Edison</a>
+            </td></tr></table>
           </td>
         </tr>
       </table>
     </td>
   </tr>
 
-  <!-- ============ 03 · O NÚMERO ============ -->
+  <!-- ================= 03 · NÚMEROS DA QUINZENA ================= -->
   <tr>
-    <td class="px" style="padding:40px 40px 0;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#E30613;">
-        <tr>
-          <td class="stack" width="38%" align="center" valign="middle" style="padding:26px 10px;">
-            <div class="num" style="font-family:Arial Black,Arial,Helvetica,sans-serif; font-size:60px; line-height:62px; font-weight:900; color:#FFFFFF;">46%</div>
-          </td>
-          <td class="stack" valign="middle" style="padding:26px 26px 26px 6px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#FFFFFF;">
-            <div style="font-size:11px; letter-spacing:2px; font-weight:bold; padding-bottom:6px; color:#FFD9DC;">03 &middot; O NÚMERO</div>
-            É quanto a receita cresce quando quatro etapas do funil melhoram 10% cada. Antes de pedir mais verba, pergunte: <strong>qual etapa eu consigo melhorar 10% neste trimestre?</strong>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-
-  <!-- ============ 04 · RADAR ============ -->
-  <tr>
-    <td class="px" style="padding:40px 40px 0; font-family:Arial,Helvetica,sans-serif;">
-      <div style="font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold;">04 &middot; RADAR</div>
-      <h2 style="margin:10px 0 12px; font-size:21px; line-height:27px; color:#0F0F0F; font-weight:800;">Reforma tributária: 2027 começa agora.</h2>
-      <p style="margin:0 0 14px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:26px; color:#1E1E1E;">2026 é o ano de teste da CBS e do IBS. Em 2027 a CBS passa a valer de fato e PIS e Cofins deixam de existir. Preço, margem, contratos de longo prazo e a escolha de regime tributário precisam ser revisados <em>antes</em> da virada. Não dá para descobrir o impacto na primeira apuração. <span style="color:#555555;">&mdash; Edson</span></p>
-      <!-- Opcional: 1 ou 2 notas curtas de mercado, marketing ou gestão por edição -->
-    </td>
-  </tr>
-
-  <!-- ============ 05 · DIAGNÓSTICO ============ -->
-  <tr>
-    <td class="px" style="padding:40px 40px 0;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F6F6F6;">
-        <tr>
-          <td style="padding:26px 26px 20px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#1E1E1E;">
-            <div style="font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold; padding-bottom:6px;">05 &middot; DIAGNÓSTICO DE 2 MINUTOS</div>
-            <div style="font-size:19px; line-height:25px; font-weight:800; color:#0F0F0F; padding-bottom:14px;">Responda com sinceridade: sim ou não?</div>
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:15px; line-height:22px;">
-              <tr><td valign="top" width="26" style="padding:0 0 10px;">&#9744;</td><td style="padding:0 0 10px;">Sei a taxa de conversão entre cada etapa do meu funil.</td></tr>
-              <tr><td valign="top" width="26" style="padding:0 0 10px;">&#9744;</td><td style="padding:0 0 10px;">Meu time responde a um lead novo em menos de 1 hora.</td></tr>
-              <tr><td valign="top" width="26" style="padding:0 0 10px;">&#9744;</td><td style="padding:0 0 10px;">Sei meu CAC por canal e quantos meses levo para recuperá-lo.</td></tr>
-              <tr><td valign="top" width="26" style="padding:0 0 10px;">&#9744;</td><td style="padding:0 0 10px;">Sei quanto da receita do ano passado continua comigo este ano.</td></tr>
-              <tr><td valign="top" width="26" style="padding:0 0 10px;">&#9744;</td><td style="padding:0 0 10px;">Tenho o fluxo de caixa projetado para os próximos 90 dias.</td></tr>
-            </table>
-            <div style="padding-top:6px; color:#555555;">Menos de 4 "sim"? Existe receita parada na sua operação. A gente ajuda a encontrar.</div>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-
-  <!-- ============ CTA (condicional por segmento) ============
-       Requer as tags "cliente-base" (clientes ativos) e "pipeline" (oportunidades abertas).
-       Se não usar conteúdo condicional, apague o bloco que não se aplica e as linhas %IF / %ELSE / %/IF%. -->
-  <tr>
-    <td class="px" align="center" style="padding:40px 40px 0; font-family:Arial,Helvetica,sans-serif;">
-%IF in_array('cliente-base', $TAGS)%
-      <div style="font-size:21px; line-height:28px; font-weight:800; color:#0F0F0F; padding-bottom:10px;">Quer olhar o seu bowtie com a gente?</div>
-      <div style="font-size:15px; line-height:23px; color:#555555; padding-bottom:22px;">Leve este tema para o próximo check-in. Montamos juntos o mapa de conversão da sua operação e escolhemos o gargalo do trimestre.</div>
+    <td class="px" style="padding:48px 40px 0;">
       <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-        <td align="center" style="background:#E30613; border-radius:4px;">
-          <a href="[link-agenda-check-in]" style="display:inline-block; padding:16px 30px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:bold; color:#FFFFFF; text-decoration:none;">QUERO MAPEAR MEU GARGALO &rarr;</a>
+        <td width="18" style="width:18px; border-top:3px solid #E30613; font-size:1px; line-height:1px;">&nbsp;</td>
+        <td style="padding-left:8px; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">03 &middot; NÚMEROS DA QUINZENA</td>
+      </tr></table>
+      <h2 style="margin:12px 0 18px; font-family:Arial,Helvetica,sans-serif; font-size:24px; line-height:30px; color:#1A1A1A; font-weight:800;">O que mexe com a sua receita e o seu caixa</h2>
+    </td>
+  </tr>
+  <tr>
+    <td class="px" style="padding:0 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="stack gap" width="50%" valign="top" style="padding:0 6px 12px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:2px solid #E30613; border-radius:10px;"><tr><td style="padding:18px; font-family:Arial,Helvetica,sans-serif;">
+              <div style="font-size:34px; line-height:38px; font-weight:900; color:#E30613;">46%</div>
+              <div style="font-size:14px; line-height:21px; color:#2A2A2A; padding-top:6px;">mais receita quando 4 etapas do funil melhoram 10% cada. Qual delas você melhora neste trimestre?</div>
+            </td></tr></table>
+          </td>
+          <td class="stack gap" width="50%" valign="top" style="padding:0 0 12px 6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;"><tr><td style="padding:18px; font-family:Arial,Helvetica,sans-serif;">
+              <div style="font-size:34px; line-height:38px; font-weight:900; color:#1A1A1A;">7&times;</div>
+              <div style="font-size:14px; line-height:21px; color:#2A2A2A; padding-top:6px;">mais chance de qualificar o lead quando o contato acontece em até 1 hora (HBR, 2011).</div>
+            </td></tr></table>
+          </td>
+        </tr>
+        <tr>
+          <td class="stack gap" width="50%" valign="top" style="padding:0 6px 0 0;">
+            <!-- Preencha com o dado do dia: valor, seta e leitura para o empresário -->
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;"><tr><td style="padding:18px; font-family:Arial,Helvetica,sans-serif;">
+              <div style="font-size:34px; line-height:38px; font-weight:900; color:#1A1A1A;">[x,xx%] <span style="font-size:18px; color:#C62828;">&#9650;</span></div>
+              <div style="font-size:14px; line-height:21px; color:#2A2A2A; padding-top:6px;">Selic. [Uma frase sobre o efeito no custo do capital de giro e na antecipação de recebíveis.]</div>
+            </td></tr></table>
+          </td>
+          <td class="stack" width="50%" valign="top" style="padding:0 0 0 6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;"><tr><td style="padding:18px; font-family:Arial,Helvetica,sans-serif;">
+              <div style="font-size:34px; line-height:38px; font-weight:900; color:#1A1A1A;">[R$ x,xx] <span style="font-size:18px; color:#1F8A4C;">&#9660;</span></div>
+              <div style="font-size:14px; line-height:21px; color:#2A2A2A; padding-top:6px;">Dólar. [Uma frase sobre o efeito em ferramentas, mídia em dólar e insumos importados.]</div>
+            </td></tr></table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ================= 04 · NO RADAR ================= -->
+  <tr>
+    <td class="px" style="padding:48px 40px 0;">
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td width="18" style="width:18px; border-top:3px solid #E30613; font-size:1px; line-height:1px;">&nbsp;</td>
+        <td style="padding-left:8px; font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">04 &middot; NO RADAR</td>
+      </tr></table>
+    </td>
+  </tr>
+  <tr>
+    <td class="px" style="padding:16px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;">
+        <tr><td style="padding:22px 24px; font-family:Arial,Helvetica,sans-serif;">
+          <div style="font-size:11px; letter-spacing:1.5px; color:#3D4350; font-weight:bold;">TRIBUTOS</div>
+          <div style="font-size:19px; line-height:25px; color:#1A1A1A; font-weight:800; padding:6px 0 10px;">Reforma tributária: 2027 começa agora.</div>
+          <div style="font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:26px; color:#2A2A2A;">2026 é o ano de teste da CBS e do IBS. Em 2027 a CBS passa a valer de fato e PIS e Cofins deixam de existir.</div>
+          <div style="font-size:15px; line-height:23px; color:#1A1A1A; padding-top:12px;"><strong style="color:#3D4350;">Nossa leitura:</strong> revise preço, margem, contratos de longo prazo e regime tributário <em>antes</em> da virada. Descobrir o impacto na primeira apuração sai caro.</div>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="px" style="padding:12px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;">
+        <tr><td style="padding:22px 24px; font-family:Arial,Helvetica,sans-serif;">
+          <div style="font-size:11px; letter-spacing:1.5px; color:#3D4350; font-weight:bold;">MARKETING &amp; VENDAS</div>
+          <div style="font-size:19px; line-height:25px; color:#1A1A1A; font-weight:800; padding:6px 0 10px;">Black Friday e fim de ano: a mídia sobe, o caixa sente.</div>
+          <div style="font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:26px; color:#2A2A2A;">Novembro e dezembro concentram a disputa por atenção e encarecem o leilão de mídia. Quem entra sem plano compra caro e vende com margem menor.</div>
+          <div style="font-size:15px; line-height:23px; color:#1A1A1A; padding-top:12px;"><strong style="color:#3D4350;">Nossa leitura:</strong> defina antes a margem mínima por oferta, o ROAS de equilíbrio e quanto de caixa a campanha pode consumir. E prepare o comercial para responder rápido no pico.</div>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ================= 05 · DIAGNÓSTICO ================= -->
+  <tr>
+    <td class="px" style="padding:48px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #E6E8EB; border-radius:10px;">
+        <tr>
+          <td style="padding:26px 26px 20px; font-family:Arial,Helvetica,sans-serif; font-size:15px; line-height:23px; color:#2A2A2A;">
+            <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+              <td width="18" style="width:18px; border-top:3px solid #E30613; font-size:1px; line-height:1px;">&nbsp;</td>
+              <td style="padding-left:8px; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">05 &middot; DIAGNÓSTICO DE 2 MINUTOS</td>
+            </tr></table>
+            <div style="font-size:20px; line-height:26px; font-weight:800; color:#1A1A1A; padding:12px 0 14px;">Responda com sinceridade: sim ou não?</div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:15px; line-height:22px;">
+              <tr><td valign="top" width="28" style="padding:0 0 10px; color:#3D4350;">&#9744;</td><td style="padding:0 0 10px;">Sei a taxa de conversão entre cada etapa do meu funil.</td></tr>
+              <tr><td valign="top" width="28" style="padding:0 0 10px; color:#3D4350;">&#9744;</td><td style="padding:0 0 10px;">Meu time responde a um lead novo em menos de 1 hora.</td></tr>
+              <tr><td valign="top" width="28" style="padding:0 0 10px; color:#3D4350;">&#9744;</td><td style="padding:0 0 10px;">Sei meu CAC por canal e quantos meses levo para recuperá-lo.</td></tr>
+              <tr><td valign="top" width="28" style="padding:0 0 10px; color:#3D4350;">&#9744;</td><td style="padding:0 0 10px;">Sei quanto da receita do ano passado continua comigo este ano.</td></tr>
+              <tr><td valign="top" width="28" style="padding:0 0 10px; color:#3D4350;">&#9744;</td><td style="padding:0 0 10px;">Tenho o fluxo de caixa projetado para os próximos 90 dias.</td></tr>
+            </table>
+            <div style="padding-top:6px; color:#5F6672;">Menos de 4 "sim"? Existe receita parada na sua operação.</div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ================= CTA PRINCIPAL (condicional por segmento) =================
+       Tags: "cliente-base" (clientes ativos). Quem não tem a tag vê a versão de pipeline.
+       Sem conteúdo condicional? Apague o bloco que não se aplica e as linhas %IF / %ELSE / %/IF%. -->
+  <tr>
+    <td class="px" align="center" style="padding:44px 40px 0; font-family:Arial,Helvetica,sans-serif;">
+%IF in_array('cliente-base', $TAGS)%
+      <div style="font-size:22px; line-height:29px; font-weight:800; color:#1A1A1A; padding-bottom:10px;">Vamos olhar o seu bowtie juntos?</div>
+      <div style="font-size:15px; line-height:23px; color:#5F6672; padding-bottom:22px;">Leve este tema para o próximo check-in. Montamos o mapa de conversão da sua operação e escolhemos o gargalo do trimestre.</div>
+      <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+        <td align="center" style="background:#E30613; border-radius:6px;">
+          <a href="[link-agenda-check-in]" style="display:inline-block; padding:16px 30px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:bold; color:#FFFFFF; text-decoration:none;">Quero mapear meu gargalo</a>
         </td>
       </tr></table>
 %ELSE%
-      <div style="font-size:21px; line-height:28px; font-weight:800; color:#0F0F0F; padding-bottom:10px;">Onde está a receita parada na sua empresa?</div>
-      <div style="font-size:15px; line-height:23px; color:#555555; padding-bottom:22px;">Em um <strong>Diagnóstico de Receita</strong> de 45 minutos, olhamos seu funil de ponta a ponta, do primeiro clique à renovação, e saímos com os 3 gargalos que mais travam seu crescimento.</div>
+      <div style="font-size:22px; line-height:29px; font-weight:800; color:#1A1A1A; padding-bottom:10px;">Onde está a receita parada na sua empresa?</div>
+      <div style="font-size:15px; line-height:23px; color:#5F6672; padding-bottom:22px;">Em um <strong style="color:#1A1A1A;">Diagnóstico de Receita</strong> de 45 minutos, olhamos seu funil de ponta a ponta, do primeiro clique à renovação, e saímos com os 3 gargalos que mais travam seu crescimento.</div>
       <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-        <td align="center" style="background:#E30613; border-radius:4px;">
-          <a href="[link-agenda-diagnostico]" style="display:inline-block; padding:16px 30px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:bold; color:#FFFFFF; text-decoration:none;">AGENDAR MEU DIAGNÓSTICO &rarr;</a>
+        <td align="center" style="background:#E30613; border-radius:6px;">
+          <a href="[link-agenda-diagnostico]" style="display:inline-block; padding:16px 30px; font-family:Arial,Helvetica,sans-serif; font-size:15px; font-weight:bold; color:#FFFFFF; text-decoration:none;">Agendar meu diagnóstico</a>
         </td>
       </tr></table>
 %/IF%
-      <div style="font-size:13px; line-height:20px; color:#888888; padding-top:16px;">Ou simplesmente responda este e-mail. Ele cai direto na nossa caixa.</div>
     </td>
   </tr>
 
-  <!-- Avaliação da edição: no ActiveCampaign, configure cada link para aplicar uma tag (ex.: destrava-nota-5) -->
+  <!-- ================= QUEM ASSINA ================= -->
   <tr>
-    <td class="px" align="center" style="padding:40px 40px 0; font-family:Arial,Helvetica,sans-serif;">
-      <div style="font-size:11px; letter-spacing:2px; color:#E30613; font-weight:bold; padding-bottom:6px;">O QUE ACHOU DESTA EDIÇÃO?</div>
-      <div style="font-size:14px; line-height:21px; color:#555555; padding-bottom:14px;">Um clique. Isso define o que vem na próxima.</div>
+    <td class="px" style="padding:52px 40px 0;">
+      <div style="height:1px; background:#E6E8EB; line-height:1px; font-size:1px;">&nbsp;</div>
+    </td>
+  </tr>
+  <tr>
+    <td class="px" style="padding:30px 40px 0;">
+      <div style="font-family:Arial,Helvetica,sans-serif; font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold; padding-bottom:18px;">QUEM ASSINA A DESTRAVA</div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top" width="72" style="padding:0 0 22px;">
+            <!-- Foto: <img src="[url-foto-caio]" width="60" height="60" style="border-radius:30px;"> -->
+            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="60" height="60" align="center" valign="middle" style="width:60px; height:60px; background:#1A1A1A; border-radius:30px; font-family:Arial,Helvetica,sans-serif; font-size:18px; font-weight:bold; color:#FFFFFF;">CF</td></tr></table>
+          </td>
+          <td valign="top" style="padding:0 0 22px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; color:#5F6672;">
+            <strong style="font-size:16px; color:#1A1A1A;">Caio Fernandes</strong><br>
+            Marketing estratégico, comercial e receita. [Mini bio: anos de experiência, nº de empresas atendidas, segmentos, resultado de destaque. Use só dados reais.]
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" width="72" style="padding:0 0 4px;">
+            <table role="presentation" cellpadding="0" cellspacing="0"><tr><td width="60" height="60" align="center" valign="middle" style="width:60px; height:60px; background:#3D4350; border-radius:30px; font-family:Arial,Helvetica,sans-serif; font-size:18px; font-weight:bold; color:#FFFFFF;">EP</td></tr></table>
+          </td>
+          <td valign="top" style="padding:0 0 4px; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:22px; color:#5F6672;">
+            <strong style="font-size:16px; color:#1A1A1A;">Edison Piai</strong><br>
+            Gestão administrativa, finanças, tributos e caixa. [Mini bio: formação, trajetória, empresas que já estruturou. Use só dados reais.]
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ================= PRÓXIMA EDIÇÃO + PERGUNTA ================= -->
+  <tr>
+    <td class="px" style="padding:30px 40px 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F5F6F7; border-radius:10px;">
+        <tr><td align="center" style="padding:26px 24px; font-family:Arial,Helvetica,sans-serif;">
+          <div style="font-size:11px; letter-spacing:2px; color:#5F6672; font-weight:bold;">NA PRÓXIMA EDIÇÃO &middot; [DD/MM]</div>
+          <div style="font-size:21px; line-height:27px; color:#1A1A1A; font-weight:800; padding:8px 0 10px;">O lead esfriou enquanto você almoçava.</div>
+          <div style="font-size:15px; line-height:23px; color:#2A2A2A; padding-bottom:18px;">Velocidade de resposta, SLA entre marketing e vendas, e quanto custa o vendedor ocioso. <strong>Qual é a sua maior dúvida sobre o comercial? Ela pode virar pauta.</strong></div>
+          <table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="border:2px solid #1A1A1A; border-radius:6px;">
+            <a href="[link-envie-sua-pergunta]" style="display:inline-block; padding:12px 24px; font-size:14px; font-weight:bold; color:#1A1A1A; text-decoration:none;">Enviar minha pergunta</a>
+          </td></tr></table>
+        </td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ================= AVALIAÇÃO ================= -->
+  <!-- No ActiveCampaign, configure cada link para aplicar uma tag (ex.: destrava-nota-5) -->
+  <tr>
+    <td class="px" align="center" style="padding:36px 40px 0; font-family:Arial,Helvetica,sans-serif;">
+      <div style="font-size:14px; line-height:21px; color:#1A1A1A; font-weight:bold; padding-bottom:12px;">O que achou desta edição?</div>
       <table role="presentation" cellpadding="0" cellspacing="0"><tr>
-        <td style="padding:0 4px;"><a href="[link-nota-1]" style="display:inline-block; width:40px; padding:10px 0; border:2px solid #0F0F0F; font-size:16px; font-weight:bold; color:#0F0F0F; text-decoration:none; text-align:center;">1</a></td>
-        <td style="padding:0 4px;"><a href="[link-nota-2]" style="display:inline-block; width:40px; padding:10px 0; border:2px solid #0F0F0F; font-size:16px; font-weight:bold; color:#0F0F0F; text-decoration:none; text-align:center;">2</a></td>
-        <td style="padding:0 4px;"><a href="[link-nota-3]" style="display:inline-block; width:40px; padding:10px 0; border:2px solid #0F0F0F; font-size:16px; font-weight:bold; color:#0F0F0F; text-decoration:none; text-align:center;">3</a></td>
-        <td style="padding:0 4px;"><a href="[link-nota-4]" style="display:inline-block; width:40px; padding:10px 0; border:2px solid #0F0F0F; font-size:16px; font-weight:bold; color:#0F0F0F; text-decoration:none; text-align:center;">4</a></td>
-        <td style="padding:0 4px;"><a href="[link-nota-5]" style="display:inline-block; width:40px; padding:10px 0; border:2px solid #E30613; background:#E30613; font-size:16px; font-weight:bold; color:#FFFFFF; text-decoration:none; text-align:center;">5</a></td>
+        <td style="padding:0 4px;"><a href="[link-nota-1]" style="display:inline-block; width:40px; padding:9px 0; border:1px solid #C9CDD3; border-radius:6px; font-size:15px; font-weight:bold; color:#1A1A1A; text-decoration:none; text-align:center;">1</a></td>
+        <td style="padding:0 4px;"><a href="[link-nota-2]" style="display:inline-block; width:40px; padding:9px 0; border:1px solid #C9CDD3; border-radius:6px; font-size:15px; font-weight:bold; color:#1A1A1A; text-decoration:none; text-align:center;">2</a></td>
+        <td style="padding:0 4px;"><a href="[link-nota-3]" style="display:inline-block; width:40px; padding:9px 0; border:1px solid #C9CDD3; border-radius:6px; font-size:15px; font-weight:bold; color:#1A1A1A; text-decoration:none; text-align:center;">3</a></td>
+        <td style="padding:0 4px;"><a href="[link-nota-4]" style="display:inline-block; width:40px; padding:9px 0; border:1px solid #C9CDD3; border-radius:6px; font-size:15px; font-weight:bold; color:#1A1A1A; text-decoration:none; text-align:center;">4</a></td>
+        <td style="padding:0 4px;"><a href="[link-nota-5]" style="display:inline-block; width:40px; padding:9px 0; border:1px solid #1A1A1A; background:#1A1A1A; border-radius:6px; font-size:15px; font-weight:bold; color:#FFFFFF; text-decoration:none; text-align:center;">5</a></td>
       </tr></table>
-      <div style="font-size:12px; color:#888888; padding-top:8px;">1 = não me ajudou &nbsp;&middot;&nbsp; 5 = vou aplicar</div>
+      <div style="font-size:12px; color:#5F6672; padding-top:8px;">1 = não me ajudou &nbsp;&middot;&nbsp; 5 = vou aplicar</div>
     </td>
   </tr>
 
   <!-- Assinatura -->
   <tr>
-    <td class="px" style="padding:40px 40px 36px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:26px; color:#1E1E1E;">
+    <td class="px" style="padding:40px 40px 36px; font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:26px; color:#2A2A2A;">
       Até a próxima,<br>
-      <strong style="font-family:Arial,Helvetica,sans-serif;">Caio Fernandes &amp; Edson Piai</strong><br>
-      <span style="font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#555555;">V4 Ferraz &amp; Piai</span>
-      <p style="margin:18px 0 0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:20px; color:#555555;"><strong>P.S.</strong> Conhece um empresário que vive dizendo "preciso de mais leads"? Encaminhe esta edição para ele.</p>
+      <strong style="font-family:Arial,Helvetica,sans-serif; color:#1A1A1A;">Caio Fernandes &amp; Edison Piai</strong><br>
+      <span style="font-family:Arial,Helvetica,sans-serif; font-size:13px; color:#5F6672;">V4 Ferraz &amp; Piai</span>
+      <p style="margin:18px 0 0; font-family:Arial,Helvetica,sans-serif; font-size:13px; line-height:20px; color:#5F6672;"><strong style="color:#1A1A1A;">P.S.</strong> Conhece um empresário que vive dizendo "preciso de mais leads"? <a href="https://wa.me/?text=[texto-e-link-da-edicao-codificado]" style="color:#1A1A1A; font-weight:bold;">Encaminhe esta edição para ele</a>.</p>
     </td>
   </tr>
 
   <!-- Rodapé -->
   <tr>
-    <td class="px" align="center" style="padding:28px 40px; background:#0F0F0F; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:19px; color:#9A9A9A;">
-      <div style="font-family:Arial Black,Arial,Helvetica,sans-serif; font-size:18px; color:#FFFFFF; font-weight:900;">DESTRAVA<span style="color:#E30613;">.</span></div>
-      <div style="padding-top:4px;">Uma newsletter da V4 Ferraz &amp; Piai</div>
+    <td class="px" style="padding:28px 40px; background:#F5F6F7; border-top:1px solid #E6E8EB; font-family:Arial,Helvetica,sans-serif; font-size:12px; line-height:19px; color:#5F6672;">
+      <div style="font-family:Arial Black,Arial,Helvetica,sans-serif; font-size:18px; color:#1A1A1A; font-weight:900;">DESTRAVA<span style="color:#E30613;">.</span></div>
+      <div style="padding-top:2px;">Uma newsletter da V4 Ferraz &amp; Piai</div>
       <div style="padding-top:12px;">
-        <a href="[link-instagram]" style="color:#FFFFFF; text-decoration:none;">Instagram</a> &nbsp;&middot;&nbsp;
-        <a href="[link-linkedin]" style="color:#FFFFFF; text-decoration:none;">LinkedIn</a> &nbsp;&middot;&nbsp;
-        <a href="[link-site]" style="color:#FFFFFF; text-decoration:none;">Site</a>
+        <a href="[link-instagram]" style="color:#1A1A1A; font-weight:bold; text-decoration:none;">Instagram</a> &nbsp;&middot;&nbsp;
+        <a href="[link-linkedin]" style="color:#1A1A1A; font-weight:bold; text-decoration:none;">LinkedIn</a> &nbsp;&middot;&nbsp;
+        <a href="[link-site]" style="color:#1A1A1A; font-weight:bold; text-decoration:none;">Site</a>
       </div>
-      <div style="padding-top:14px;">[Endereço da unidade] &middot; [Cidade/UF]</div>
-      <div style="padding-top:6px;">Você recebe este e-mail porque é cliente ou conversou com a V4 Ferraz &amp; Piai.<br>
-        <a href="%UNSUBSCRIBELINK%" style="color:#9A9A9A; text-decoration:underline;">Descadastrar</a>
-      </div>
+      <div style="padding-top:14px;">DESTRAVA, edição 01 de [DD/MM/AAAA]. Você recebe este e-mail porque é cliente ou conversou com a V4 Ferraz &amp; Piai.</div>
+      <div style="padding-top:6px;">V4 Ferraz &amp; Piai &middot; [Endereço completo da unidade]</div>
+      <div style="padding-top:10px;"><a href="%WEBCOPY%" style="color:#5F6672;">Ver no navegador</a> &middot; <a href="%UNSUBSCRIBELINK%" style="color:#5F6672;">Descadastrar</a></div>
     </td>
   </tr>
 
